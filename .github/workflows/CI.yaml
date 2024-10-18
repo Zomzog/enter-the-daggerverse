@@ -22,7 +22,7 @@ jobs:
           version: "latest"
           verb: call
           workdir: hello
-          args: build --source=.  
+          args: publish --source=.  
           # assumes the Dagger Cloud token is in
           # a repository secret named DAGGER_CLOUD_TOKEN
           # set via the GitHub UI/CLI
