@@ -14,13 +14,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        
       -
         name: Call Dagger Function
         uses: dagger/dagger-for-github@v6
         with:
           version: "latest"
           verb: call
-          module: ./hello
+          workdir: hello
           args: build --source=.  
           # assumes the Dagger Cloud token is in
           # a repository secret named DAGGER_CLOUD_TOKEN
